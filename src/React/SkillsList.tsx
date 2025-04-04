@@ -54,10 +54,10 @@ const SkillsList = () => {
       "🥸 Detallista en la experiencia de usuario (UX)"
     ],
     "Otras habilidades": [
+      "🔎 Consultas a Bases de Datos SQL",
+      "🔄 Control de versiones con Git y flujos ordenados",
       "🧩 Resolución de problemas entre diseño y desarrollo",
       "📚 Aprendizaje constante de nuevas herramientas y tecnologías",
-      "✍️ Documentación ordenada",
-      "🔄 Control de versiones con Git y flujos ordenados",
     ],
   };
 
