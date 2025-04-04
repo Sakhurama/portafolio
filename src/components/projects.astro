@@ -1,38 +1,63 @@
 ---
 import { Image } from "astro:assets";
-import svgl from "../../public/svgl.png";
-import stockin from "../../public/stockin.png";
-import moviesfordevs from "../../public/moviesfordevs.png";
+import Logic from "../../public/Logic.png";
+import mcDonalds from "../../public/mcDonalds.png";
+import Miclima from "../../public/Miclima.png";
+import Pokemon from "../../public/Pokemon.png";
+import Skolmi from "../../public/Skolmi.png";
+import Tilt from "../../public/Tilt.png";
+
 
 interface Project {
   title: string;
   image: ImageMetadata;
   link: string;
   preview: string;
-  status: string;
+  description: string;
 }
 
 const projects: Project[] = [
   {
-    title: "MoviesForDevs",
-    image: moviesfordevs as ImageMetadata,
-    link: "https://github.com/gothsec/MoviesForDevs",
-    preview: "https://movies-for-devs.vercel.app",
-    status: "On Development",
+    title: "Restaurante Admin",
+    image: mcDonalds as ImageMetadata,
+    link: "https://github.com/Sakhurama/AdminDeliverys",
+    preview: "https://admindeliverys.netlify.app/",
+    description: "On Development",
   },
   {
-    title: "StockIn",
-    image: stockin as ImageMetadata,
-    link: "https://github.com/gothsec/stockin-demo",
-    preview: "https://stockin-demo.vercel.app",
-    status: "On Development",
+    title: "Pokemon Game",
+    image: Pokemon as ImageMetadata,
+    link: "https://github.com/Sakhurama/PokeGame",
+    preview: "https://mokepon-app.netlify.app/",
+    description: "On Development",
   },
   {
-    title: "Svgl.app",
-    image: svgl as ImageMetadata,
-    link: "https://github.com/pheralb/svgl",
-    preview: "https://svgl.app",
-    status: "Contributor",
+    title: "Mi Clima",
+    image: Miclima as ImageMetadata,
+    link: "https://github.com/Sakhurama/miclima",
+    preview: "https://mi-climapp.netlify.app/",
+    description: "Contributor",
+  },
+  {
+    title: "Tienda Online",
+    image: Tilt as ImageMetadata,
+    link: "",
+    preview: "https://tiltskateboards.com/",
+    description: "Contributor",
+  },
+  {
+    title: "Prototipado SAAS",
+    image: Logic as ImageMetadata,
+    link: "",
+    preview: "https://drive.google.com/file/d/1fJ_qfSVhEHdthYd7kIRqG62GXwEMuPgo/view?usp=sharing",
+    description: "Contributor",
+  },
+  {
+    title: "Renovación Interfaz",
+    image: Skolmi as ImageMetadata,
+    link: "",
+    preview: "https://sticky-gander-817.notion.site/107f73a66d39805e97befc91190768d1?v=0fb4f2f2312f42428d82b893739d91b5",
+    description: "Contributor",
   },
 ];
 ---
@@ -42,8 +67,12 @@ const projects: Project[] = [
   class="py-12 border-t border-[#ffffff10] text-[var(--white)]"
 >
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">My work</h2>
-    <h3 class="text-4xl md:text-5xl font-medium mb-8">Projects</h3>
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">
+      ¡Codeando!
+    </h2>
+    <h3 class="text-4xl md:text-5xl font-medium mb-8">
+      Proyectos
+    </h3>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {
@@ -66,10 +95,11 @@ const projects: Project[] = [
                 <div class="flex-grow">
                   <h4 class="text-2xl font-semibold">{project.title}</h4>
                   <span class="py-1 text-sm text-[var(--white-icon)]">
-                    {project.status}
+                    {project.description}
                   </span>
                 </div>
                 <div class="flex gap-2 ml-auto">
+                  { project.link ? 
                   <a
                     target="_blank"
                     href={project.link}
@@ -84,7 +114,8 @@ const projects: Project[] = [
                     >
                       <path d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z" />
                     </svg>
-                  </a>
+                  </a> 
+                  : null}
                   <a
                     target="_blank"
                     href={project.preview}
@@ -113,7 +144,9 @@ const projects: Project[] = [
       aria-label="GitHub"
       class="w-full flex items-center justify-center gap-2 mt-9 text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-full bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
     >
-      <span class="md:text-lg text-md">More projects on</span>
+      <span class="md:text-lg text-md">
+        Más proyectos en
+      </span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
