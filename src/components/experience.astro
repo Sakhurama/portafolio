@@ -28,7 +28,7 @@ const EXPERIENCE: ExperienceProp[] = [
       "Alpine.js",
       "Tailwind",
     ],
-    logo: "/logos/dutchpet.jpeg",
+    logo: "/logos/skolmi.jpg",
   },
   {
     dates: "March 2021 — November 2021",
@@ -48,17 +48,7 @@ const EXPERIENCE: ExperienceProp[] = [
       "Liquid",
       "SASS/PostCSS",
     ],
-    logo: "/logos/aws.jpeg",
-  },
-  {
-    dates: "December 2019 — January 2021",
-    title: "Product Designer",
-    company: "Miinto",
-    companyUrl: "https://www.miinto.com",
-    description:
-      "Created a Design System for the internal system using Figma. Developed a plugin for Figma to populate prototypes with real data to enhance the prototyping and testing experience. Conducted user research and testing, and created user flows, wireframes, and Hi-Fi prototypes.",
-    technologies: ["Figma"],
-    logo: "/logos/miinto.jpeg",
+    logo: "/logos/logic.jpg",
   },
   {
     dates: "January 2019 — September 2019",
@@ -68,7 +58,7 @@ const EXPERIENCE: ExperienceProp[] = [
     description:
       "Worked on developing a Polish Government Joint Stock Company website using JS, Magnolia CMS, and FreeMarker.",
     technologies: ["JavaScript", "Magnolia CMS", "FreeMarker"],
-    logo: "/logos/efigence.jpeg",
+    logo: "/logos/medusa.jpg",
   },
 ];
 ---
@@ -80,7 +70,7 @@ const EXPERIENCE: ExperienceProp[] = [
     <h3 class="text-4xl md:text-5xl font-medium text-[var(--white)] mb-6">
       Experiencia
     </h3>
-    <div class="">
+    <div class="mt-10">
       <ol class="group/list space-y-12">
         {EXPERIENCE.map((experience) => <XpCards {...experience} />)}
       </ol>
