@@ -1,0 +1,15 @@
+.swiper-pagination {
+    bottom: 0px !important;
+    margin-top: 24px;
+    position: relative !important;
+}
+
+.custom-swiper .swiper-pagination-bullet {
+    background-color: #bbbbbb70 !important; /* Color para bullets inactivos */
+    opacity: 0.9;
+    transition: background-color 0.3s;
+}
+
+.custom-swiper .swiper-pagination-bullet-active {
+    background-color: #a476ff !important; /* Azul Tailwind: sky-400 */
+}
