@@ -4,11 +4,11 @@ import LetterGlitch from "../React/LetterGlitch.tsx";
 
 <footer class="w-full pt-24 border-t border-[#ffffff10]">
   <div class="max-w-5xl mx-auto">
-      <div class="pb-20 flex flex-col items-center justify-center">
-        <h3 class="text-4xl font-medium text-[var(--white)]">
+      <div class="md:pb-20 flex flex-col items-center justify-center">
+        <h3 class="text-center text-3xl md:text-4xl font-medium text-[var(--white)]">
           ¡<span class="text-[var(--sec)] shiny-sec">Gracias</span> por llegar hasta aquí!
         </h3>
-          <p class="mt-4 text-[var(--white-icon)]">
+          <p class="text-center text-lg mt-4 text-[var(--white-icon)]">
             ¿Tienes un proyecto en mente? ¡Escríbeme!
           </p>
         <div class="flex justify-start gap-2 pt-3 md:pt-6">
@@ -69,12 +69,16 @@ import LetterGlitch from "../React/LetterGlitch.tsx";
           </a>
         </div>
         <div
-        class="flex justify-center md:w-full md:h-[292px] size-[290px] pt-3 md:pt-9 md:ml-16"
+        class="flex justify-center md:w-full md:h-[292px] size-[290px] pt-8 md:pt-9"
       >
+      <!-- 
+      glitchColors={["#5e4491", "#A476FF", "#241a38"]}
+      glitchColors={["#1c1f24", "#2e2e33", "#45454a"]
+      -->
         <LetterGlitch
           client:load
           glitchColors={["#5e4491", "#A476FF", "#241a38"]}
-          glitchSpeed={33}
+          glitchSpeed={100}
           centerVignette={false}
           outerVignette={true}
           smooth={true}
