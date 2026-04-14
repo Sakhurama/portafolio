@@ -5,7 +5,9 @@ import mcDonalds from "../../public/proyectos/mcDonalds.png";
 import Miclima from "../../public/proyectos/Miclima.png";
 import Pokemon from "../../public/proyectos/Pokemon.png";
 import Skolmi from "../../public/proyectos/Skolmi.png";
-import Tilt from "../../public/proyectos/Tilt.png";
+import Finanzas from "../../public/proyectos/finanzas.png";
+import Landing from "../../public/proyectos/skolmi-landing.png";
+import Mia from "../../public/proyectos/mia.png";
 
 
 interface Project {
@@ -18,32 +20,32 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Gestión Financiera",
+    image: Finanzas as ImageMetadata,
+    link: "",
+    preview: "https://finanzas-amber.vercel.app/",
+    description: "Estaba cansado de llevar mis finanzas en un feo Excel, creé mi propio software de gestión financiera.",
+  },
+  {
     title: "Restaurante Admin",
     image: mcDonalds as ImageMetadata,
     link: "https://github.com/Sakhurama/AdminDeliverys",
     preview: "https://admindeliverys.netlify.app/",
-    description: "Dashboard Backoffice. SAAS para administrar Ventas, Domicilios y Clientes.",
+    description: "Dashboard Backoffice. SAAS para administrar ventas, domicilios y clientes.",
   },
   {
-    title: "Pokemon Game",
-    image: Pokemon as ImageMetadata,
-    link: "https://github.com/Sakhurama/PokeGame",
-    preview: "https://mokepon-app.netlify.app/",
-    description: "Practicando y reforzando conceptos de Javascript Vanilla.",
-  },
-  {
-    title: "Mi Clima",
-    image: Miclima as ImageMetadata,
-    link: "https://github.com/Sakhurama/miclima",
-    preview: "https://mi-climapp.netlify.app/",
-    description: "Consumo de API en Next Js.",
-  },
-  {
-    title: "Tienda Online",
-    image: Tilt as ImageMetadata,
+    title: "Landings Oferta Academica",
+    image: Landing as ImageMetadata,
     link: "",
-    preview: "https://tiltskateboards.com/",
-    description: "Ecommerce con Wordpress, WooComerce, Elementor, Google analitics...",
+    preview: "https://www.skolmi.com/preescolar",
+    description: "Implementé un diseño a medida, moderno, centrado en el usuario y optimizado para SEO.",
+  },
+  {
+    title: "Progressive Web App EdTech",
+    image: Mia as ImageMetadata,
+    link: "",
+    preview: "https://mia-app.vercel.app/",
+    description: "Ecosistema digital para la autogestión académica de padres.",
   },
   {
     title: "Prototipado SAAS",
@@ -59,6 +61,21 @@ const projects: Project[] = [
     preview: "https://sticky-gander-817.notion.site/107f73a66d39805e97befc91190768d1?v=0fb4f2f2312f42428d82b893739d91b5",
     description: "Mejora de la UI/UX de proceso de matrículas en un proyecto con PHP.",
   },
+    // ADIOS, Fueron mi proceso y para avanzar hay que dejar algo atrás... Gracias proyectitos.
+  // {
+  //   title: "Pokemon Game",
+  //   image: Pokemon as ImageMetadata,
+  //   link: "https://github.com/Sakhurama/PokeGame",
+  //   preview: "https://mokepon-app.netlify.app/",
+  //   description: "Practicando y reforzando conceptos de Javascript Vanilla.",
+  // },
+  // {
+  //   title: "Mi Clima",
+  //   image: Miclima as ImageMetadata,
+  //   link: "https://github.com/Sakhurama/miclima",
+  //   preview: "https://mi-climapp.netlify.app/",
+  //   description: "Consumo de API en Next Js.",
+  // },
 ];
 ---
 
