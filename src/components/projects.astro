@@ -16,6 +16,7 @@ interface Project {
   link: string;
   preview: string;
   description: string;
+  technologies: string[];
 }
 
 const projects: Project[] = [
@@ -25,6 +26,7 @@ const projects: Project[] = [
     link: "",
     preview: "https://finanzas-amber.vercel.app/",
     description: "Estaba cansado de llevar mis finanzas en un feo Excel, creé mi propio software de gestión financiera.",
+    technologies: ["React", "Vite", "Supabase"],
   },
   {
     title: "Restaurante Admin",
@@ -32,6 +34,7 @@ const projects: Project[] = [
     link: "https://github.com/Sakhurama/AdminDeliverys",
     preview: "https://admindeliverys.netlify.app/",
     description: "Dashboard Backoffice. SAAS para administrar ventas, domicilios y clientes.",
+    technologies: ["Next Js", "React", "GraphQL"],
   },
   {
     title: "Landings Oferta Academica",
@@ -39,6 +42,7 @@ const projects: Project[] = [
     link: "",
     preview: "https://www.skolmi.com/preescolar",
     description: "Implementé un diseño a medida, moderno, centrado en el usuario y optimizado para SEO.",
+    technologies: ["Next Js", "React", "Figma", "UX/UI"],
   },
   {
     title: "Progressive Web App EdTech",
@@ -46,6 +50,7 @@ const projects: Project[] = [
     link: "",
     preview: "https://mia-app.vercel.app/",
     description: "Ecosistema digital para la autogestión académica de padres.",
+    technologies: ["Next Js", "React", "PWA", "Figma"],
   },
   {
     title: "Prototipado SAAS",
@@ -53,6 +58,7 @@ const projects: Project[] = [
     link: "",
     preview: "https://drive.google.com/file/d/1fJ_qfSVhEHdthYd7kIRqG62GXwEMuPgo/view?usp=sharing",
     description: "Diseño de prototipo en Figma de un Software para generar reportes.",
+    technologies: ["Figma", "Prototipado", "UX/UI"],
   },
   {
     title: "Renovación Interfaz",
@@ -60,6 +66,7 @@ const projects: Project[] = [
     link: "",
     preview: "https://sticky-gander-817.notion.site/107f73a66d39805e97befc91190768d1?v=0fb4f2f2312f42428d82b893739d91b5",
     description: "Mejora de la UI/UX de proceso de matrículas en un proyecto con PHP.",
+    technologies: ["HTML", "CSS", "PHP"],
   },
     // ADIOS, Fueron mi proceso y para avanzar hay que dejar algo atrás... Gracias proyectitos.
   // {
@@ -110,44 +117,60 @@ const projects: Project[] = [
               </div>
               <div class="flex items-center px-3">
                 <div class="flex-grow">
-                  <h4 class="text-2xl font-semibold">{project.title}</h4>
-                  <span class="py-1 text-sm text-[var(--white-icon)]">
-                    {project.description}
-                  </span>
-                </div>
-                <div class="flex gap-2 ml-auto">
-                  { project.link ? 
-                  <a
-                    target="_blank"
-                    href={project.link}
-                    aria-label="GitHub"
-                    class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      class="size-7"
-                    >
-                      <path d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z" />
-                    </svg>
-                  </a> 
-                  : null}
-                  <a
-                    target="_blank"
-                    href={project.preview}
-                    aria-label="Preview"
-                    class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      class="size-7"
-                    >
-                      <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
-                    </svg>
-                  </a>
+                  { 
+                    project.technologies.length && (
+                      <ul class="mb-2 flex flex-wrap" aria-label="Technologies used">
+                      {project.technologies.map((technology) => (
+                          <li class="mr-1.5 mt-2">
+                          <div class="flex items-center backdrop-blur-sm rounded-full border border-neutral-700 border-opacity-50 shadow bg-neutral-400/10 px-3 py-1 text-xs font-medium leading-5 text-neutral-300">
+                              {technology}
+                          </div>
+                          </li>
+                      ))}
+                      </ul>
+                  )}
+                  <div class="flex items-center">
+                    <div>
+                      <h4 class="text-2xl font-semibold">{project.title}</h4>
+                      <span class="py-1 text-sm text-[var(--white-icon)]">
+                        {project.description}
+                      </span>
+                    </div>
+                    <div class="hidden md:flex gap-2 ml-auto">
+                      { project.link ? 
+                      <a
+                        target="_blank"
+                        href={project.link}
+                        aria-label="GitHub"
+                        class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="size-7"
+                        >
+                          <path d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z" />
+                        </svg>
+                      </a> 
+                      : null}
+                      <a
+                        target="_blank"
+                        href={project.preview}
+                        aria-label="Preview"
+                        class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="size-7"
+                        >
+                          <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </a>
